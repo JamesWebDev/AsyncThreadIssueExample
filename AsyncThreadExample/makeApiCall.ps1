@@ -1,0 +1,1 @@
+Invoke-WebRequest -Uri "http://localhost:63894/api/test/MyAsyncIssueExample" -Body "{ Message: 'Hello World' }" -Method Post
