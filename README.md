@@ -32,6 +32,12 @@ DoSomeNormalAsyncThing end 09:41:41.248 AM
 ```
 Notice output includes **DoSomeNormalAsyncThing end** this time.
 
+## Notice web.config app settings added
+  <appSettings>
+    <add key="aspnet:UseTaskFriendlySynchronizationContext" value="true"/>
+    <add key="aspnet:AllowAsyncDuringSyncStages" value="true"/>
+
 ## Workarounds
 If you make the **DoSomeNonAwaitedAsyncThing** an Async Void the thread runs to completion.
 If you wrap the call to **DoSomeNonAwaitedAsyncThing** in Task.Run the thread runs to completion
+
